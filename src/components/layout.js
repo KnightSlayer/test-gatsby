@@ -8,12 +8,16 @@ const Layout = ({ pageTitle, children }) => {
         <main className={styles.container}>
             <title>{pageTitle}</title>
             <nav>
-                <ul>
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/about">About</Link></li>
+                <ul className={styles.navLinks}>
+                    <li className={styles.navLinkItem}>
+                        <Link className={styles.navLinkText} to="/">Home</Link>
+                    </li>
+                    <li className={styles.navLinkItem}>
+                        <Link className={styles.navLinkText} to="/about">About</Link>
+                    </li>
                 </ul>
             </nav>
-            <h1>{pageTitle}</h1>
+            <h1 className={styles.heading}>{pageTitle}</h1>
             {children}
         </main>
     )
